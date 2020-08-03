@@ -16,6 +16,7 @@ import {
   TextInput,
   Image,
   ScrollView,
+  TouchableOpacity,
 } from 'react-native';
 
 export default class App extends Component {
@@ -321,13 +322,49 @@ export default class App extends Component {
           {/* News Section */}
           <View
             style={{paddingTop: 16, paddingHorizontal: 16, paddingBottom: 16}}>
-            <View>
+            <View style={{position: 'relative'}}>
               <Image
                 source={require('./component/News/news1.png')}
                 style={{height: 170, width: '100%', borderRadius: 7}}
               />
+              <View
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  backgroundColor: 'black',
+                  opacity: 0.3,
+                  borderRadius: 7,
+                }}
+              />
+              <View
+                style={{
+                  height: 20,
+                  width: 60,
+                  position: 'absolute',
+                  top: 10,
+                  left: 16,
+                }}>
+                <Image
+                  source={require('./component/Icon/gojek_white.png')}
+                  style={{
+                    width: undefined,
+                    height: undefined,
+                    resizeMode: 'contain',
+                    flex: 1,
+                  }}
+                />
+              </View>
             </View>
-            <View style={{paddingTop: 16}}>
+            <View
+              style={{
+                paddingTop: 16,
+                paddingBottom: 20,
+                borderBottomWidth: 1,
+                borderBottomColor: '#D1D1D1',
+              }}>
               <Text
                 style={{fontSize: 18, fontWeight: 'bold', color: '#1C1C1C'}}>
                 GO NEWS
@@ -342,54 +379,358 @@ export default class App extends Component {
                 COVID-19 (coronavirus disease 2019) adalah penyakit yang
                 disebabkan oleh jenis coronavirus baru yaitu Sars-CoV-2.
               </Text>
+              <TouchableOpacity
+                style={{
+                  borderWidth: 1,
+                  backgroundColor: '#0BD819',
+                  borderColor: '#0BD819',
+                  borderRadius: 5,
+                  marginTop: 12,
+                  alignSelf: 'flex-end',
+                  paddingHorizontal: 12,
+                  paddingVertical: 11,
+                }}>
+                <Text
+                  style={{
+                    color: 'white',
+                    fontSize: 15,
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                  }}>
+                  READ
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+
+          {/* Internal Information Section */}
+          <View style={{paddingHorizontal: 16, marginBottom: 16}}>
+            <View style={{borderBottomWidth: 1, borderBottomColor: '#D1D1D1'}}>
               <View
                 style={{
-                  position: 'relative',
-                  alignItems: 'flex-end',
-                  paddingRight: 2,
+                  height: 20,
+                  width: 60,
                 }}>
+                <Image
+                  source={require('./component/Icon/gojek-black.png')}
+                  style={{
+                    width: undefined,
+                    height: undefined,
+                    resizeMode: 'contain',
+                    flex: 1,
+                  }}
+                />
+              </View>
+              <Text
+                style={{
+                  marginVertical: 10,
+                  fontSize: 17,
+                  fontWeight: 'bold',
+                  color: '#1C1C1C',
+                  marginBottom: 12,
+                }}>
+                Complete Your Profile
+              </Text>
+              <View style={{flexDirection: 'row'}}>
+                <View>
+                  <Image source={require('./component/News/connect-fb.png')} />
+                </View>
+                <View style={{marginLeft: 16}}>
+                  <Text
+                    style={{
+                      fontSize: 15,
+                      fontWeight: 'bold',
+                      color: '#4A4A4A',
+                    }}>
+                    Connect With facebook
+                  </Text>
+                  <Text
+                    style={{
+                      fontSize: 15,
+                      fontWeight: '400',
+                      color: '#7A7A7A',
+                      width: '75%',
+                    }}>
+                    Log In faster without verification code
+                  </Text>
+                </View>
+              </View>
+              <TouchableOpacity
+                style={{
+                  borderWidth: 1,
+                  backgroundColor: '#0BD819',
+                  borderColor: '#0BD819',
+                  borderRadius: 5,
+                  alignSelf: 'flex-end',
+                  paddingHorizontal: 12,
+                  paddingVertical: 11,
+                  marginBottom: 16,
+                }}>
+                <Text
+                  style={{
+                    color: 'white',
+                    fontSize: 15,
+                    fontWeight: 'bold',
+                    textAlign: 'center',
+                  }}>
+                  CONNECT
+                </Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+
+          {/* Gofood Banner Section */}
+          <View
+            style={{
+              paddingHorizontal: 16,
+              paddingBottom: 16,
+            }}>
+            <View
+              style={{
+                borderBottomColor: '#D1D1D1',
+                borderBottomWidth: 1,
+                paddingBottom: 16,
+              }}>
+              <View style={{position: 'relative'}}>
+                <Image
+                  source={require('./component/News/banner-foods.png')}
+                  style={{height: 170, width: '100%', borderRadius: 7}}
+                />
                 <View
                   style={{
-                    borderWidth: 1,
+                    width: '100%',
+                    height: '100%',
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    backgroundColor: 'black',
+                    opacity: 0.2,
+                    borderRadius: 7,
+                  }}
+                />
+                <View
+                  style={{
+                    height: 20,
                     width: 60,
-                    height: 30,
-                    backgroundColor: '#0BD819',
-                    borderColor: '#0BD819',
-                    borderRadius: 5,
-                    marginTop: 12,
-                    alignItems: 'center',
-                    justifyContent: 'center',
+                    position: 'absolute',
+                    top: 10,
+                    left: 16,
                   }}>
-                  <Text
-                    style={{color: 'white', fontSize: 15, fontWeight: 'bold'}}>
-                    READ
-                  </Text>
+                  <Image
+                    source={require('./component/Icon/go-food-white.png')}
+                    style={{
+                      width: undefined,
+                      height: undefined,
+                      resizeMode: 'contain',
+                      flex: 1,
+                    }}
+                  />
+                </View>
+                <View
+                  style={{
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 0,
+                    width: '100%',
+                    flexDirection: 'row',
+                    alignItems: 'center',
+                    paddingHorizontal: 16,
+                    paddingVertical: 16,
+                  }}>
+                  <View>
+                    <Text
+                      style={{
+                        fontSize: 18,
+                        fontWeight: 'bold',
+                        color: 'white',
+                        marginBottom: 8,
+                      }}>
+                      Free GO-FOOD Vouchers
+                    </Text>
+                    <Text
+                      style={{fontSize: 12, fontWeight: '400', color: 'white'}}>
+                      Quick, before they run out!{' '}
+                    </Text>
+                  </View>
+                  <View style={{flex: 1, paddingLeft: 12}}>
+                    <TouchableOpacity
+                      style={{
+                        backgroundColor: '#0BD819',
+                        paddingHorizontal: 12,
+                        paddingVertical: 11,
+                        alignSelf: 'flex-end',
+                        borderRadius: 5,
+                      }}>
+                      <Text
+                        style={{
+                          fontSize: 12,
+                          fontWeight: 'bold',
+                          color: 'white',
+                        }}>
+                        GET VOUCHER
+                      </Text>
+                    </TouchableOpacity>
+                  </View>
                 </View>
               </View>
             </View>
           </View>
-          <View style={{paddingHorizontal: 16}}>
-            <View style={{borderWidth: 0.5, borderColor: '#D1D1D1'}} />
-          </View>
-          {/* Gofood Banner Section */}
-          <View style={{paddingHorizontal: 17, paddingVertical: 16}}>
-            <View style={{position: 'relative'}}>
-              <Image
-                source={require('./component/News/banner-foods.png')}
-                style={{height: 170, width: '100%', borderRadius: 7}}
-              />
-              {/* <View
+
+          {/* Nearby Go-Food Section(Scroll Horizontal view) */}
+          <View style={{marginBottom: 20}}>
+            <View style={{paddingHorizontal: 16}}>
+              <View
                 style={{
-                  position: 'absolute',
-                  height: '100%',
-                  width: '100%',
-                  top: '0',
-                  left: '0',
-                  backgroundColor: 'black',
-                  opacity: 0.15,
-                }}></View> */}
-              <Image source={require('./component/Icon/gopay.png')} />
+                  height: 20,
+                  width: 60,
+                }}>
+                <Image
+                  source={require('./component/Icon/gojek-black.png')}
+                  style={{
+                    width: undefined,
+                    height: undefined,
+                    resizeMode: 'contain',
+                    flex: 1,
+                  }}
+                />
+              </View>
+              <View
+                style={{
+                  flexDirection: 'row',
+                  justifyContent: 'space-between',
+                  marginVertical: 12,
+                }}>
+                <Text
+                  style={{fontSize: 17, fontWeight: 'bold', color: '#1C1C1C'}}>
+                  Nearby Restaurant
+                </Text>
+                <Text
+                  style={{fontSize: 17, fontWeight: 'bold', color: '#61A756'}}>
+                  See All
+                </Text>
+              </View>
             </View>
+            <ScrollView
+              horizontal={true}
+              showsHorizontalScrollIndicator={false}
+              style={{flexDirection: 'row'}}>
+              <View style={{alignItems: 'flex-start', paddingHorizontal: 16}}>
+                <View
+                  style={{
+                    height: 150,
+                    width: 150,
+                  }}>
+                  <Image
+                    source={require('./component/News/gf-dkf.png')}
+                    style={{
+                      width: undefined,
+                      height: undefined,
+                      resizeMode: 'cover',
+                      flex: 1,
+                      borderRadius: 8,
+                    }}
+                  />
+                </View>
+                <Text
+                  style={{
+                    fontSize: 16,
+                    fontWeight: 'bold',
+                    color: '#1C1C1C',
+                    marginTop: 12,
+                  }}>
+                  DKF Indonesia
+                </Text>
+              </View>
+              <View style={{paddingHorizontal: 16, alignItems: 'flex-start'}}>
+                <View
+                  style={{
+                    height: 150,
+                    width: 150,
+                  }}>
+                  <Image
+                    source={require('./component/News/gf-sangpisang.png')}
+                    style={{
+                      width: undefined,
+                      height: undefined,
+                      resizeMode: 'cover',
+                      flex: 1,
+                      borderRadius: 8,
+                    }}
+                  />
+                </View>
+                <Text
+                  style={{
+                    fontSize: 16,
+                    fontWeight: 'bold',
+                    color: '#1C1C1C',
+                    marginTop: 12,
+                  }}>
+                  Sang Pisang
+                </Text>
+              </View>
+              <View style={{paddingHorizontal: 16, alignItems: 'flex-start'}}>
+                <View
+                  style={{
+                    height: 150,
+                    width: 150,
+                  }}>
+                  <Image
+                    source={require('./component/News/gf-nonajudes.png')}
+                    style={{
+                      width: undefined,
+                      height: undefined,
+                      resizeMode: 'cover',
+                      flex: 1,
+                      borderRadius: 8,
+                    }}
+                  />
+                </View>
+                <Text
+                  style={{
+                    fontSize: 16,
+                    fontWeight: 'bold',
+                    color: '#1C1C1C',
+                    marginTop: 12,
+                  }}>
+                  Nona Judes
+                </Text>
+              </View>
+              <View style={{paddingHorizontal: 16, alignItems: 'flex-start'}}>
+                <View
+                  style={{
+                    height: 150,
+                    width: 150,
+                  }}>
+                  <Image
+                    source={require('./component/News/gf-padangpetir.png')}
+                    style={{
+                      width: undefined,
+                      height: undefined,
+                      resizeMode: 'cover',
+                      flex: 1,
+                      borderRadius: 8,
+                    }}
+                  />
+                </View>
+                <Text
+                  style={{
+                    fontSize: 16,
+                    fontWeight: 'bold',
+                    color: '#1C1C1C',
+                    marginTop: 12,
+                  }}>
+                  Padang Petir
+                </Text>
+              </View>
+            </ScrollView>
+            <View
+              style={{
+                borderBottomWidth: 1,
+                borderBottomColor: '#D1D1D1',
+                marginHorizontal: 16,
+                marginTop: 14,
+              }}
+            />
           </View>
         </ScrollView>
         {/* Bottom Navigation */}
